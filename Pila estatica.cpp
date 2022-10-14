@@ -46,6 +46,16 @@ void Pila::pop(void){
     }
 }
 
+void Pila::peek(void){
+    int aux=pila[cont-1];
+    if(cont==0){
+        cout<<"La pila esta vacia"<<endl;
+    }
+    else{
+        cout<<aux;
+    }
+}
+
 void Pila::print(void){
     if(cont==0){
         cout<<"Pila vacia"<<endl;
@@ -86,5 +96,15 @@ int main(){
     cout<<"\n";
     pil.pop();
     pil.pop();
+    cout<<"\nAplicacion de peek"<<endl;
+    pil.peek();
+    pil.push(9);
+    pil.push(50);
+    pil.push(1);
+    pil.push(72);
+    pil.push(300);
+    pil.peek();
+    cout<<"\n";
+    pil.print();
     return 0;
 }
