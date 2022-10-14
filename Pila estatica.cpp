@@ -11,8 +11,8 @@ class Pila{
 
         Pila();
         void push(int data);
-        int pop(void);
-        int peek(void);
+        void pop(void);
+        void peek(void);
         void print(void);
 
 };
@@ -29,6 +29,20 @@ void Pila::push(int data){
     else{
         pila[cont]=data;
         cont++;
+    }
+}
+
+void Pila::pop(void){
+    int aux;
+    aux=pila[cont-1];
+    if(cont==0){
+        cout<<"La pila esta vacia"<<endl;
+    }
+    else{
+
+        cout<<"Elemento que fue sacado: "<<aux<<endl;
+        cont--;
+
     }
 }
 
@@ -55,8 +69,22 @@ int main(){
     pil.push(72);
     pil.push(300);
     pil.print();
-    cout<<"\n\nHacer un push cuando la pila esta llena"<<endl;
+    cout<<"\nHacer un push cuando la pila esta llena"<<endl;
     pil.push(1);
-
+    cout<<"\nAplicacion del pop"<<endl;
+    pil.pop();
+    pil.print();
+    cout<<"\n";
+    pil.pop();
+    pil.print();
+    cout<<"\n";
+    pil.pop();
+    pil.print();
+    cout<<"\n";
+    pil.pop();
+    pil.print();
+    cout<<"\n";
+    pil.pop();
+    pil.pop();
     return 0;
 }
