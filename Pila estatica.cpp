@@ -22,9 +22,41 @@ Pila::Pila(){
     pila[0]=0;
 }
 
+void Pila::push(int data){
+    if(cont==MAX){
+        cout<<"Pila llena"<<endl;
+    }
+    else{
+        pila[cont]=data;
+        cont++;
+    }
+}
+
+void Pila::print(void){
+    if(cont==0){
+        cout<<"Pila vacia"<<endl;
+    }
+    else{
+        for(int i=0; i<cont; i++){
+            cout<<pila[i]<<" ";
+        }
+    }
+}
+
 int main(){
 
+    Pila pil;
 
+    cout<<"\tDavila Gomez Alvaro 217700553"<<endl;
+    cout<<"\nMetodo push"<<endl;
+    pil.push(9);
+    pil.push(50);
+    pil.push(1);
+    pil.push(72);
+    pil.push(300);
+    pil.print();
+    cout<<"\n\nHacer un push cuando la pila esta llena"<<endl;
+    pil.push(1);
 
     return 0;
 }
